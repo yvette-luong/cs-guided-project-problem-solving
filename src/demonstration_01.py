@@ -35,11 +35,12 @@ def last(a, n):
     if n > len(a):
         return "invalid"
     # Make sure n is positive
-    if n == 0:
+    if n <= 0:
         return []
-    # # Check if n is 0 
-    # if n == 0 
-    #     return []
+    # Get the last elements from the list
+    return a[-n::] 
+    '''
+    OR: 
     # Get the last elements from the list  
     result = []
     # Loop n times
@@ -50,7 +51,8 @@ def last(a, n):
         result.insert(0, val)
 
     return result
-
+    '''
+    
 print(last([4, 3, 9, 9, 7, 6], 3))
 print(last([1, 2, 3, 4, 5], 7))
 print(last([1, 2, 3, 4, 5], -7))

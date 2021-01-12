@@ -24,5 +24,23 @@ Notes:
 
 
 def emotify(txt):
-    # Your code here
+    # Make dictionary that maps words to emojis
+    emoji_map = {
+        "smile": ":D",
+        "grin": ":)",
+        "sad": ":(",
+        "mad": ":P"
+    }
+
+    # Pull the last word off the text
+    word = txt[8:]  
+    # 8 is the length of "Make me"
+    return "Make me" + emoji_map[word]
+
+print(emotify("Make me smile"))
+print(emotify("Make me grin"))
+print(emotify("Make me sad"))
+
+
+
 
